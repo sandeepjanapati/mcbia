@@ -23,19 +23,22 @@ The **Monday.com Business Intelligence Agent** is an advanced AI-driven analytic
 The project strictly adheres to modular design principles to guarantee separation of concerns between configuration, UI, and external service communication.
 
 ```text
-mcbia2/
-├── run_app.py                      # Main entry point linking the agent with the Streamlit UI
+mcbia/
 ├── app/                            # Core Application Logic
 │   ├── config.py                   # Environment variable validation and initialization
-│   ├── agent/  
-│   │   └── gemini_brain.py         # LLM configuration, system prompts, and tool bindings
-│   ├── services/  
+│   ├── services/
 │   │   ├── monday_api.py           # Monday.com API Client (GraphQL execution & mapping)
 │   │   └── data_cleaning.py        # String sanitization, currency parsing, and date standardization
-│   └── tools/  
-│       └── bi_tools.py             # Specific quantitative metrics aggregation and data querying functions
-└── ui/  
-    └── interface.py                # Streamlit interface handling chat sessions, state, and rendering
+│   ├── tools/
+│   │   └── bi_tools.py             # Specific quantitative metrics aggregation and data
+│   └── agent/
+│       └── gemini_brain.py         # LLM configuration, system prompts, and tool bindings
+├── ui/
+│   └── interface.py                # Streamlit interface handling chat sessions, state, and rendering
+├── .env                            # Secrets
+├── .gitignore                      # Git rules
+├── requirements.txt                # Dependencies
+└── run_app.py                      # Main entry point linking the agent with the Streamlit UI
 ```
 
 ---
