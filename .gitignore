@@ -4,3 +4,14 @@
 # Python Cache
 __pycache__/
 *.pyc
+*.pyo
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
